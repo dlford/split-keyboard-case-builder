@@ -1,8 +1,14 @@
 # Split Keyboard Case Builder
 
-WIP: Template still being fine tuned
-
 This tool makes building 3D printed custom split keyboard cases (and plates) easy, if you can use Inkscape, you can build a keyboard case.
+
+## WIP
+
+To Do:
+
+- [ ] Add mounting point and port hole for Pro Micro board
+- [ ] Add hole for reset button
+- [ ] Add hole for TRRS jack
 
 ## Requirements
 
@@ -24,4 +30,5 @@ We need to create and export four SVG files from the template, `kb_plate_locking
 ## Creating the STL files
 
 1. Run `build.sh` to create STL files in the `output` folder, or open the OpenSCAD files to tweak parameters and export STL files manually.
+    - Note: If the ports in the case don't line up, you'll need to adjust their location in OpenSCAD via parameters.
 2. Print them up and build yourself a keyboard!

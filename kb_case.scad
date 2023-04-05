@@ -7,7 +7,7 @@ linear_extrude(height = wall_height, center = true) {
 }
 
 translate([0, 0, right_side ? -(wall_height / 2) : (wall_height / 2) ]) {
-    linear_extrude(height = 1.5, center = true) {
+    linear_extrude(height = bottom_thickness, center = true) {
         import("src/kb_case_bottom.svg", center = true, dpi = 96);
     }
 }
