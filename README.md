@@ -20,7 +20,7 @@ You must have [Inkscape](https://inkscape.org/) and [OpenSCAD](https://openscad.
 
 All the work is done in `template.svg` using Inkscape.
 
-We need to create and export four SVG files from the template, `kb_plate_locking.svg` makes up the top half of the key plate that the switches can lock into, `kb_plate_open.svg` makes the bottom half of the plate, `kb_case_wall.svg` is the walls of the case, and `kb_case_bottom` is the bottom of the case. These four SVG files will be converted by OpenSCAD to four STL files, one case and one plate for each half of the keyboard.
+We need to create and export four SVG files from the template, `kb_plate_locking.svg` makes up the top half of the key plate that the switches can lock into, `kb_plate_open.svg` makes the bottom half of the plate, `kb_case_wall.svg` is the walls of the case, `kb_case_bottom` is the inside bottom of the case, and `kb_case_bottom_outer` is the counter-sunk portion of the case bottom. These four SVG files will be converted by OpenSCAD to two STL files, case and plate. You'll need some 8mm or 10mm standoffs and 2mm screws to attach the plate to the case.
 
 1. Key Layout - Clone the "keycode with clearance" to layout your keys, the black boxes should be touching but not overlapping.
 2. `kb_plate_locking.svg` - Clone the layout, draw an outline around all the keys with the pen tool, this is the plate part of the case where the switches mount (use the "Corners" path effect to round out the edges if desired, make sure to do "path" > "object to path" after). Add counter-sunk screw holes between the keyholes, the "screw hole" bit in the template is for 2mm machine screws, adjust it as needed.
@@ -34,21 +34,17 @@ We need to create and export four SVG files from the template, `kb_plate_locking
 
 1. Run `build.sh` to create STL files in the `output` folder, or open the OpenSCAD files to tweak parameters and export STL files manually.
     - Note: If the ports in the case don't line up, you'll need to adjust their location in OpenSCAD via parameters.
-2. Print them up and build yourself a keyboard!
+2. You'll need to mirror both parts to print the other half for split keyboards, you can do this with modern slicers such as PrusaSlicer.
+3. Print them up and build yourself a keyboard!
 
 ## OpenSCAD Parameters
-
-### Plate
-
-- `right_side`: Builds the right half if true, left half if false
 
 ### Case
 
 - `show_voids`: If true will show ports and slots as solids for assistance in positioning (because you can't see voids if they're outside the part body), set to false to make them voids for printing
-- `right_side`: Builds the right half if true, left half if false
 - `wall_height`: Height of the case wall, should be above the plate so bottom of keycaps sit flush, default value of `20.6` works well with 8mm standoffs
 - `bottom_thickness`: Thickness of the case bottom, the last 1.5mm will be the counter-sunk portion, so the total screw hole depth is `bottom_thickness` - 1.5mm
-- `controller_pcb_axis_rotation`: PCB mount, Set to `0` for back or front, `90` or `270` for left or right side
+- `controller_pcb_axis_rotation`: PCB mount, Set to `0` for back or front, `90` for left or right side
 - `controller_pcb_x_offset`: PCB mount, move left or right in plane
 - `controller_pcb_y_offset`: PCB mount, move forward or backward in plane
 - `controller_pcb_thickness`: Thickness of PCB, the default should work fine for most boards
@@ -61,12 +57,12 @@ We need to create and export four SVG files from the template, `kb_plate_locking
 - `controller_usb_port_height`: height of USB port opening
 - `controller_usb_port_depth`: Length of USB port opening (void)
 - `trrs_jack_hole_size`: Diameter of hole for TRRS jack
-- `trrs_jack_axis_rotation`: Set to `0` for back or front, `90` or `270` for left or right side
+- `trrs_jack_axis_rotation`: Set to `0` for back or front, `90` for left or right side
 - `trrs_jack_x_offset`: Move TRRS jack hole left or right in plane
 - `trrs_jack_y_offset`: Move TRRS jack hole forward or backward in plane
 - `trrs_jack_z_offset`: Move TRRS jack hole up or down in plane
 - `reset_button_hole_size`: Diameter of reset button hole
-- `reset_button_axis_rotation`: Set to `0` for back or front, `90` or `270` for left or right side
+- `reset_button_axis_rotation`: Set to `0` for back or front, `90` for left or right side
 - `reset_button_x_offset`: Move reset button hole left or right in plane
 - `reset_button_y_offset`: Move reset button hole forward or backward in plane
 - `reset_button_z_offset`: Move reset button hole up or down in plane
