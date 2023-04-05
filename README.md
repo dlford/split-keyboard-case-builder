@@ -44,6 +44,7 @@ We need to create and export four SVG files from the template, `kb_plate_locking
 
 ### Case
 
+- `show_voids`: If true will show ports and slots as solids for assistance in positioning (because you can't see voids if they're outside the part body), set to false to make them voids for printing
 - `right_side`: Builds the right half if true, left half if false
 - `wall_height`: Height of the case wall, should be above the plate so bottom of keycaps sit flush, default value of `20.6` works well with 8mm standoffs
 - `bottom_thickness`: Thickness of the case bottom, the last 1.5mm will be the counter-sunk portion, so the total screw hole depth is `bottom_thickness` - 1.5mm
@@ -56,6 +57,9 @@ We need to create and export four SVG files from the template, `kb_plate_locking
 - `controller_pcb_riser_width`: PCB riser, this gives clearance for solder joints on the bottom of PCB, lower number here gives more clearance on the sides
 - `controller_pcb_riser_height`: PCB riser, higher number here gives more clearance underneath
 - `controller_pcb_plug_depth`: Controls how deep into the case wall to cut for the USB port to be flush, higher number here is a deeper cut (closer to outside wall)
+- `controller_usb_port_width`: Width of USB port opening
+- `controller_usb_port_height`: height of USB port opening
+- `controller_usb_port_depth`: Length of USB port opening (void)
 - `trrs_jack_hole_size`: Diameter of hole for TRRS jack
 - `trrs_jack_axis_rotation`: Set to `0` for back or front, `90` or `270` for left or right side
 - `trrs_jack_x_offset`: Move TRRS jack hole left or right in plane

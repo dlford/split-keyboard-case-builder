@@ -1,3 +1,6 @@
+$fa=1;
+$fs=0.4;
+
 right_side = false;
 
 linear_extrude(height = 1.5, center = true) {
