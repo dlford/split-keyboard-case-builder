@@ -35,3 +35,34 @@ We need to create and export four SVG files from the template, `kb_plate_locking
 1. Run `build.sh` to create STL files in the `output` folder, or open the OpenSCAD files to tweak parameters and export STL files manually.
     - Note: If the ports in the case don't line up, you'll need to adjust their location in OpenSCAD via parameters.
 2. Print them up and build yourself a keyboard!
+
+## OpenSCAD Parameters
+
+### Plate
+
+- `right_side`: Builds the right half if true, left half if false
+
+### Case
+
+- `right_side`: Builds the right half if true, left half if false
+- `wall_height`: Height of the case wall, should be above the plate so bottom of keycaps sit flush, default value of `20.6` works well with 8mm standoffs
+- `bottom_thickness`: Thickness of the case bottom, the last 1.5mm will be the counter-sunk portion, so the total screw hole depth is `bottom_thickness` - 1.5mm
+- `controller_pcb_axis_rotation`: PCB mount, Set to `0` for back or front, `90` or `270` for left or right side
+- `controller_pcb_x_offset`: PCB mount, move left or right in plane
+- `controller_pcb_y_offset`: PCB mount, move forward or backward in plane
+- `controller_pcb_thickness`: Thickness of PCB, the default should work fine for most boards
+- `controller_pcb_width`: Width of PCB, the default is Pro Micro / Elite-C size
+- `controller_pcb_length`: Length of PCB, the default is Pro Micro / Elite-C size
+- `controller_pcb_riser_width`: PCB riser, this gives clearance for solder joints on the bottom of PCB, lower number here gives more clearance on the sides
+- `controller_pcb_riser_height`: PCB riser, higher number here gives more clearance underneath
+- `controller_pcb_plug_depth`: Controls how deep into the case wall to cut for the USB port to be flush, higher number here is a deeper cut (closer to outside wall)
+- `trrs_jack_hole_size`: Diameter of hole for TRRS jack
+- `trrs_jack_axis_rotation`: Set to `0` for back or front, `90` or `270` for left or right side
+- `trrs_jack_x_offset`: Move TRRS jack hole left or right in plane
+- `trrs_jack_y_offset`: Move TRRS jack hole forward or backward in plane
+- `trrs_jack_z_offset`: Move TRRS jack hole up or down in plane
+- `reset_button_hole_size`: Diameter of reset button hole
+- `reset_button_axis_rotation`: Set to `0` for back or front, `90` or `270` for left or right side
+- `reset_button_x_offset`: Move reset button hole left or right in plane
+- `reset_button_y_offset`: Move reset button hole forward or backward in plane
+- `reset_button_z_offset`: Move reset button hole up or down in plane
