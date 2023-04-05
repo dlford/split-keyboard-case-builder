@@ -53,8 +53,8 @@ module pcb_mount() {
     translate([0, -1.5, 0]) {
         difference() {
             cube([controller_pcb_riser_width, 4.5, 2 + controller_pcb_thickness + 0.15 + controller_pcb_riser_height]);
-            translate([0, 5.5, 3.5]) {
-                rotate([45, 0, 0])
+            translate([0, 4, 3.5]) {
+                rotate([20, 0, 0])
                     cube([controller_pcb_riser_width + 0.15, 5, 5]);
             }
         }
