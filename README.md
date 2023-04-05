@@ -2,6 +2,8 @@
 
 This tool makes building 3D printed custom split keyboard cases (and plates) easy, if you can use Inkscape, you can build a keyboard case.
 
+![Example output STL files](readme_assets/output.png)
+
 ## WIP
 
 To Do:
@@ -18,7 +20,7 @@ You must have [Inkscape](https://inkscape.org/) and [OpenSCAD](https://openscad.
 
 All the work is done in `template.svg` using Inkscape.
 
-We need to create and export four SVG files from the template, `kb_plate_locking.svg` makes up the top half of the key plate that the switches can lock into, `kb_plate_open.svg` makes the bottom half of the plate, `kb_case_wall.svg` is the walls of the case, and `kb_case_bottom` is the bottom of the case.
+We need to create and export four SVG files from the template, `kb_plate_locking.svg` makes up the top half of the key plate that the switches can lock into, `kb_plate_open.svg` makes the bottom half of the plate, `kb_case_wall.svg` is the walls of the case, and `kb_case_bottom` is the bottom of the case. These four SVG files will be converted by OpenSCAD to four STL files, one case and one plate for each half of the keyboard.
 
 1. Key Layout - Clone the "keycode with clearance" to layout your keys, the black boxes should be touching but not overlapping.
 2. `kb_plate_locking.svg` - Clone the layout, draw an outline around all the keys with the pen tool, this is the plate part of the case where the switches mount (use the "Corners" path effect to round out the edges if desired, make sure to do "path" > "object to path" after). Add screw holes between the keyholes, the "screw hole" bit in the template is for 2mm machine screws, adjust it as needed.
