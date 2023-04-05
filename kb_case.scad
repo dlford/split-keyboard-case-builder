@@ -1,6 +1,6 @@
 right_side = true;
 wall_height = 20.6;
-bottom_thickness = 4;
+bottom_thickness = 3;
 
 controller_pcb_axis_rotation = 0;
 controller_pcb_x_offset = 0;
@@ -27,7 +27,13 @@ linear_extrude(height = wall_height, center = true) {
 }
 
 translate([0, 0, right_side ? -(wall_height / 2) : (wall_height / 2) ]) {
-    linear_extrude(height = bottom_thickness, center = true) {
+    linear_extrude(height = bottom_thickness - 1.5, center = true) {
         import("src/kb_case_bottom.svg", center = true, dpi = 96);
+    }
+}
+
+translate([0, 0, right_side ? -((wall_height / 2) + 1.5) : ((wall_height / 2) + 1.5) ]) {
+    linear_extrude(height = 1.5, center = true) {
+        import("src/kb_case_bottom_outer.svg", center = true, dpi = 96);
     }
 }
