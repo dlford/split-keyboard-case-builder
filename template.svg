@@ -28,8 +28,8 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.25801363"
-     inkscape:cx="2420.4148"
-     inkscape:cy="1056.1458"
+     inkscape:cx="2422.3526"
+     inkscape:cy="1060.0215"
      inkscape:window-width="1920"
      inkscape:window-height="1055"
      inkscape:window-x="1920"
@@ -1069,22 +1069,6 @@
        height="10.721645"
        x="57.122547"
        y="93.562096" />
-    <text
-       xml:space="preserve"
-       style="font-size:4.23333px;line-height:1.25;font-family:'Maven Pro';-inkscape-font-specification:'Maven Pro';stroke-width:0.264583"
-       x="-29.059772"
-       y="53.139809"
-       id="text1901"><tspan
-         sodipodi:role="line"
-         id="tspan1899"
-         style="stroke-width:0.264583"
-         x="-29.059772"
-         y="53.139809">OLED PCB - 1.2</tspan><tspan
-         sodipodi:role="line"
-         style="stroke-width:0.264583"
-         x="-29.059772"
-         y="58.431473"
-         id="tspan1903">OLED Screen - 1.42</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.276953px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 254.15993,89.038464 h 4.04897 v 0.882654 h 6.32862 l 8.3e-4,-0.882654 h 4.04823 v 15.937246 h -4.04898 v -0.88264 h -6.32862 v 0.88264 h -4.04896 z"
@@ -1490,5 +1474,16 @@
        inkscape:export-filename="src/kb_case_bottom_outer.svg"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Maven Pro';-inkscape-font-specification:'Maven Pro';stroke-width:0.264583"
+       x="54.920696"
+       y="117.74344"
+       id="text451"><tspan
+         sodipodi:role="line"
+         id="tspan449"
+         style="stroke-width:0.264583"
+         x="54.920696"
+         y="117.74344">128x64 OLED</tspan></text>
   </g>
 </svg>

@@ -2,7 +2,7 @@
 
 This tool makes building 3D printed custom split keyboard cases (and plates) easy, if you can use Inkscape, you can build a keyboard case.
 
-![Example output STL files](readme_assets/output.png)
+![Example output STL files](readme_assets/output.jpg)
 
 ## Requirements
 
