@@ -7,7 +7,7 @@ wall_height = 20.6;
 bottom_thickness = 3;
 
 controller_pcb_axis_rotation = 00;
-controller_pcb_x_offset = 7.00;
+controller_pcb_x_offset = 9.50;
 controller_pcb_y_offset = 16.75;
 controller_pcb_thickness = 2.20;
 controller_pcb_width = 18.05;
@@ -19,14 +19,14 @@ controller_usb_port_width = 12.00;
 controller_usb_port_height = 8.00;
 controller_usb_port_depth = 5.00;
 trrs_jack_hole_size = 8.50;
-trrs_jack_axis_rotation = 90;
-trrs_jack_x_offset = -45.00;
-trrs_jack_y_offset = 30.00;
-trrs_jack_z_offset = 4.00;
+trrs_jack_axis_rotation = 0;
+trrs_jack_x_offset = -43.00;
+trrs_jack_y_offset = 50.00;
+trrs_jack_z_offset = 3.50;
 reset_button_hole_size = 7.50;
 reset_button_axis_rotation = 0;
-reset_button_x_offset = 33.00;
-reset_button_y_offset = 55.00;
+reset_button_x_offset = -55.00;
+reset_button_y_offset = 50.00;
 reset_button_z_offset = 3.50;
 
 module case_wall() {
