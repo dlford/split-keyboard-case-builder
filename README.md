@@ -4,14 +4,6 @@ This tool makes building 3D printed custom split keyboard cases (and plates) eas
 
 ![Example output STL files](readme_assets/output.png)
 
-## WIP
-
-To Do:
-
-- [ ] Add mounting point and port hole for Pro Micro board
-- [ ] Add hole for reset button
-- [ ] Add hole for TRRS jack
-
 ## Requirements
 
 You must have [Inkscape](https://inkscape.org/) and [OpenSCAD](https://openscad.org/) installed, that's it!

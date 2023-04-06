@@ -6,7 +6,7 @@ show_voids = false;
 wall_height = 20.6;
 bottom_thickness = 3;
 
-controller_pcb_axis_rotation = 0; // TODO: Enable this
+controller_pcb_axis_rotation = 00;
 controller_pcb_x_offset = 7.00;
 controller_pcb_y_offset = 16.75;
 controller_pcb_thickness = 2.20;
@@ -108,17 +108,20 @@ module case_body() {
     }
 
     translate([controller_pcb_x_offset, controller_pcb_y_offset, -((wall_height / 2) - bottom_thickness + 2.15)]) {
-        pcb_mount();
+        rotate([0, 0, controller_pcb_axis_rotation])
+            pcb_mount();
     }
 }
 
 if (show_voids) {
     case_body();
     translate([controller_pcb_x_offset, controller_pcb_y_offset, -((wall_height / 2) - bottom_thickness + 2.15)]) {
-        translate([-(((controller_usb_port_width / 2) - controller_pcb_riser_width) / 2), controller_pcb_length + 1 + controller_usb_port_depth, controller_pcb_riser_height + controller_pcb_thickness]) {
-            pcb_port();
-        }
-        pcb_slot();
+        rotate([0, 0, controller_pcb_axis_rotation])
+            translate([-(((controller_usb_port_width / 2) - controller_pcb_riser_width) / 2), controller_pcb_length + 1 + controller_usb_port_depth, controller_pcb_riser_height + controller_pcb_thickness]) {
+                pcb_port();
+            }
+        rotate([0, 0, controller_pcb_axis_rotation])
+            pcb_slot();
     }
     trrs_port();
     reset_button_port();
@@ -126,10 +129,12 @@ if (show_voids) {
     difference() {
         case_body();
         translate([controller_pcb_x_offset, controller_pcb_y_offset, -((wall_height / 2) - bottom_thickness + 2.15)]) {
-            translate([-(((controller_usb_port_width / 2) - controller_pcb_riser_width) / 2), controller_pcb_length + 1 + controller_usb_port_depth, controller_pcb_riser_height + controller_pcb_thickness]) {
-                pcb_port();
-            }
-            pcb_slot();
+            rotate([0, 0, controller_pcb_axis_rotation])
+                translate([-(((controller_usb_port_width / 2) - controller_pcb_riser_width) / 2), controller_pcb_length + 1 + controller_usb_port_depth, controller_pcb_riser_height + controller_pcb_thickness]) {
+                    pcb_port();
+                }
+            rotate([0, 0, controller_pcb_axis_rotation])
+                pcb_slot();
         }
         trrs_port();
         reset_button_port();
